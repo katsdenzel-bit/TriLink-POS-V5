@@ -8,7 +8,6 @@ import { UsagePage } from "@/components/UsagePage";
 import { AdminDashboard } from "@/components/admin/AdminDashboard";
 import { UsersManagement } from "@/components/admin/UsersManagement";
 import { VouchersManagement } from "@/components/admin/VouchersManagement";
-import { TokensPage } from "@/components/admin/TokensPage";
 import { ReportsPage } from "@/components/admin/ReportsPage";
 import { SettingsPage } from "@/components/admin/SettingsPage";
 import { AuthPage } from "@/components/auth/AuthPage";
@@ -16,7 +15,7 @@ import { CustomerDashboard } from "@/components/customer/CustomerDashboard";
 import { AuthProvider, useAuth } from "@/hooks/useAuth";
 
 const IndexContent = () => {
-  const [currentPage, setCurrentPage] = useState('dashboard');
+  const [currentPage, setCurrentPage] = useState('home');
   const { user, userRole, loading, signOut } = useAuth();
 
   if (loading) {
@@ -39,8 +38,6 @@ const IndexContent = () => {
           return <UsersManagement />;
         case 'vouchers':
           return <VouchersManagement />;
-        case 'tokens':
-          return <TokensPage />;
         case 'reports':
           return <ReportsPage />;
         case 'settings':
@@ -58,8 +55,6 @@ const IndexContent = () => {
           return <UsersManagement />;
         case 'vouchers':
           return <VouchersManagement />;
-        case 'tokens':
-          return <TokensPage />;
         default:
           return <AdminDashboard />;
       }

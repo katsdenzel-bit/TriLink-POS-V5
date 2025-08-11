@@ -1,7 +1,7 @@
-
 import { Wifi, Menu, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import trilinkLogo from "@/assets/trilink-logo.png";
 
 interface HeaderProps {
   currentPage: string;
@@ -18,7 +18,6 @@ export const Header = ({ currentPage, onPageChange, isAdmin = false, onSignOut, 
         { id: 'dashboard', label: 'Dashboard' },
         { id: 'users', label: 'Users' },
         { id: 'vouchers', label: 'Vouchers' },
-        { id: 'tokens', label: 'Tokens' },
         { id: 'reports', label: 'Reports' },
         { id: 'settings', label: 'Settings' }
       ];
@@ -28,8 +27,7 @@ export const Header = ({ currentPage, onPageChange, isAdmin = false, onSignOut, 
       return [
         { id: 'dashboard', label: 'Dashboard' },
         { id: 'users', label: 'Users' },
-        { id: 'vouchers', label: 'Vouchers' },
-        { id: 'tokens', label: 'Tokens' }
+        { id: 'vouchers', label: 'Vouchers' }
       ];
     }
     
@@ -47,11 +45,11 @@ export const Header = ({ currentPage, onPageChange, isAdmin = false, onSignOut, 
     <header className="bg-card shadow-card border-b sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-4 cursor-pointer" onClick={() => onPageChange('home')}>
-            <img src="/lovable-uploads/b2ddcd57-4272-484d-bca3-00012be120eb.png" alt="TriLink Wireless" className="h-12 w-auto" />
+          <div className="flex items-center space-x-4">
+            <img src={trilinkLogo} alt="TriLink Wireless" className="h-10 w-auto" />
             <div>
-              <h1 className="text-2xl font-bold text-foreground">TriLink Wireless</h1>
-              <p className="text-base text-muted-foreground">Affordable Wireless ISP</p>
+              <h1 className="text-xl font-bold text-foreground">TriLink Wireless</h1>
+              <p className="text-sm text-muted-foreground">High-Speed Internet Access</p>
             </div>
           </div>
 

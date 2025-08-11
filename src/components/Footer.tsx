@@ -1,5 +1,5 @@
-
 import { Wifi, MapPin, Phone, Mail } from "lucide-react";
+import trilinkLogo from "@/assets/trilink-logo.png";
 
 export const Footer = () => {
   return (
@@ -9,11 +9,11 @@ export const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <img src="/lovable-uploads/b2ddcd57-4272-484d-bca3-00012be120eb.png" alt="TriLink Wireless" className="h-10 w-auto" />
-              <span className="font-bold text-xl">TriLink Wireless</span>
+              <img src={trilinkLogo} alt="TriLink Wireless" className="h-8 w-auto" />
+              <span className="font-bold text-lg">TriLink Wireless</span>
             </div>
-            <p className="text-muted-foreground text-base">
-              Affordable Wireless ISP - Providing reliable internet access for everyone. 
+            <p className="text-muted-foreground">
+              Providing affordable, reliable internet access for everyone. 
               Your trusted wireless ISP partner.
             </p>
             <div className="flex items-center space-x-2 text-sm text-muted-foreground">
@@ -54,7 +54,7 @@ export const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4" />
-                <span>+256 771 611570</span>
+                <span>0771712356</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
